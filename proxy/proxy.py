@@ -157,8 +157,10 @@ def proxy_thread(conn, client_addr):
                 ppp2="data_out/receiver-out" + str(IDXX) +"d.bin" #receiver-out
                 ppp3="data_out/receiver-out" + str(IDXX) +".bin" #receiver-out
                 sss2=""
-		
+		ddd=0
                 while 1:
+		    print("wait for "+str(IDXX)+" c="+str(ddd))
+		    ddd=ddd+1
 	            aaa2=os.path.isfile(ppp2)
                     if aaa2:
         	        try:
@@ -171,6 +173,8 @@ def proxy_thread(conn, client_addr):
 		            #f2.close()
                         #print(sss2)
                         break
+		    if ddd>=45:
+		        break
 		
 	        #aaax=os.path.isfile(aaad)
                 #if aaax:
