@@ -19,7 +19,8 @@ def main():
         return
 
     if args.option == 'sender':
-        cmd = [send_src, args.port]
+        cmd = [send_src, args.port, args.thid]#
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ("+args.thid+") $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
         check_call(cmd)
         return
 

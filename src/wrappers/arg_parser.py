@@ -29,6 +29,7 @@ def parse_wrapper_args(run_first):
         sender_parser.add_argument('port', help='port of receiver')
     else:
         sender_parser.add_argument('port', help='port to listen on')
+        sender_parser.add_argument('thid', help='th id to listen on')
         receiver_parser.add_argument(
             'ip', metavar='IP', help='IP address of sender')
         receiver_parser.add_argument('port', help='port of sender')
