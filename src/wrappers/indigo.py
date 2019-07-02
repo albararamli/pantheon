@@ -25,7 +25,7 @@ def main():
         return
 
     if args.option == 'receiver':
-        cmd = [recv_src, args.ip, args.port]
+        cmd = [recv_src, args.ip, args.port, args.thid]
         check_call(cmd)
         return
 
