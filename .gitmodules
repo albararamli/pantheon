@@ -45,7 +45,7 @@
 [submodule "third_party/indigo"]
 	path = third_party/indigo
 	url = https://github.com/albararamli/indigo.git 
-	#https://github.com/StanfordSNR/indigo.git
+	branch = master
 	ignore = dirty
 [submodule "third_party/scream-reproduce"]
 	path = third_party/scream-reproduce
