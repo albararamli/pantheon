@@ -1,3 +1,6 @@
+# Virtual Box:  enp0s3
+# Wifi:         wlp2s0
+
 echo $(/sbin/ip -o -4 addr list wlp2s0 | awk '{print $4}' | cut -d/ -f1) > ip.txt
 cd pantheon
 gnome-terminal -e 'sh -c "python third_party/indigo/env/proxy.py 9999;exec bash"'
