@@ -21,7 +21,7 @@ def parse_wrapper_args(run_first):
 
     receiver_parser = subparsers.add_parser('receiver', help='run receiver')
     sender_parser = subparsers.add_parser('sender', help='run sender')
-
+    '''
     if run_first == 'receiver':
         receiver_parser.add_argument('port', help='port to listen on')
         sender_parser.add_argument(
@@ -33,6 +33,22 @@ def parse_wrapper_args(run_first):
         receiver_parser.add_argument(
             'ip', metavar='IP', help='IP address of sender')
         receiver_parser.add_argument('port', help='port of sender')
+    '''
+    if run_first == 'receiver':
+
+        receiver_parser.add_argument('port', help='port to listen on')
+        receiver_parser.add_argument('thid', help='th id to listen on')
+
+        sender_parser.add_argument('ip', metavar='IP', help='IP address of receiver')
+        sender_parser.add_argument('port', help='port of receiver')
+        sender_parser.add_argument('thid', help='th id to receiver on')
+    else:
+        sender_parser.add_argument('port', help='port to listen on')
+        sender_parser.add_argument('thid', help='th id to listen on')
+
+        receiver_parser.add_argument('ip', metavar='IP', help='IP address of sender')
+        receiver_parser.add_argument('port', help='port of sender')
+        receiver_parser.add_argument('thid', help='th id to sender on')
 
     args = parser.parse_args()
 
