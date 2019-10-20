@@ -1,5 +1,5 @@
-#git clone https://github.com/StanfordSNR/pantheon.git
-git clone https://github.com/albararamli/pantheon.git
+git clone https://github.com/StanfordSNR/pantheon.git
+#git clone https://github.com/albararamli/pantheon.git
 cd pantheon/
 ./tools/fetch_submodules.sh
 ./tools/install_deps.sh
